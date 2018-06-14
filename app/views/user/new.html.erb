@@ -1,0 +1,6 @@
+<form action="/user/create" method="POST">
+    <input type="hidden" name="authenticity_token" value = "<%= form_authenticity_token %>"><br/>
+    <input type="text" name = "name" placeholder="회원가입"><br/>
+    <input type = "password" name="password" placeholder="비밀번호"><br/>
+    <input type="submit" value="등록하기">
+</form>

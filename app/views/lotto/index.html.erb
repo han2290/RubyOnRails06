@@ -1,0 +1,12 @@
+<h1>이번주 로또 번호는 <%= @new_lotto.lotto_num%>입니다.</h1>
+
+<form action="/lotto/new" method="POST">
+    <input type="hidden" name="authenticity_token" value = "<%= form_authenticity_token %>"><br/>
+    <input type="submit" value = "로또번호신규발급">
+</form>
+
+<ul>
+    <% @lottos.each do |lotto|%>
+        <li><%=lotto.lotto_num%></li>
+    <%end%>
+</ul>
